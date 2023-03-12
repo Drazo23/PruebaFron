@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
     providedIn: 'root'
 })
 export class SExperienciaService{
-    expURL = 'https://backprueba-tnk1.onrender.com/experlabo/'
+    expURL = 'https://backprueba-rds0.onrender.com/experlabo/'
 
     constructor(private httpCliente: HttpClient) { }
 

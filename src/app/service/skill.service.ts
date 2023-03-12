@@ -7,7 +7,7 @@ import { Skill } from '../model/skill';
     providedIn: 'root' 
 })
 export class SkillService {
-    URL = 'https://backprueba-tnk1.onrender.com/skill/';
+    URL = 'https://backprueba-rds0.onrender.com/skill/';
     
     constructor(private httpClient: HttpClient){}
 

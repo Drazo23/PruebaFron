@@ -8,7 +8,8 @@ import { Proyecto } from "../model/proyecto";
     providedIn: 'root'
 })
 export class ProyectoService {
-    URL = 'https://backprueba-rds0.onrender.com/proyecto/';
+    URL = 'https://backprueba-b2kf.onrender.com/proyecto/'
+    /*URL = 'http://localhost:8080/proyectos/';*/
     constructor(private httpClient : HttpClient){}
 
     public lista(): Observable<Proyecto[]>{

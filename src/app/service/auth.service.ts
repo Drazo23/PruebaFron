@@ -9,7 +9,8 @@ import { Nuevousuario } from '../model/nuevo-usuario';
     providedIn: 'root'
 })
 export class AuthService {
-    authURL = 'https://backprueba-rds0.onrender.com/auth/'
+    authURL = 'https://backprueba-b2kf.onrender.com/auth/'
+    /*authURL = 'http://localhost:8080/auth/'*/
 
     constructor(private httpCliente: HttpClient) { }
 

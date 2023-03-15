@@ -17,7 +17,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
@@ -27,6 +26,9 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
 import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -59,10 +61,11 @@ import { NewproyectoComponent } from './components/proyecto/newproyecto.componen
     BrowserAnimationsModule,
     FormsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
-    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })
